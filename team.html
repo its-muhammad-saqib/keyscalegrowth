@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Meet the KeyScale Growth team - Experienced professionals dedicated to your B2B success." />
+  <title>Our Team | KeyScale Growth</title>
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { 50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a' },
+            navy: { 900: '#0F172A', 800: '#1E293B', 700: '#334155', 600: '#475569' },
+            accent: { sky: '#0EA5E9', light: '#38BDF8' }
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        },
+      },
+    }
+  </script>
+  <style>
+    * { scroll-behavior: smooth; }
+    .glass { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+    .gradient-text { background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .card-shadow { box-shadow: 0 10px 40px -10px rgba(37, 99, 235, 0.2); }
+    .hover-lift { transition: all 0.3s ease; }
+    .hover-lift:hover { transform: translateY(-8px); box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.3); }
+    .reveal { opacity: 1; transform: translateY(0); transition: all 0.8s ease; }
+    .reveal:not(.active) { opacity: 0; transform: translateY(30px); }
+    .no-js .reveal { opacity: 1 !important; transform: none !important; }
+    .btn-primary { background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); transition: all 0.3s ease; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px -5px rgba(37, 99, 235, 0.5); }
+  </style>
+</head>
+<body class="font-sans antialiased bg-white text-navy-900 overflow-x-hidden">
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-navy-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center space-x-3">
+          <div class="w-10 h-10 bg-gradient-to-br from-primary-600 to-accent-sky rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">KeyScale Growth</span>
+            <p class="text-xs text-gray-400 -mt-1">B2B Revenue Acceleration</p>
+          </div>
+        </a>
+
+        <div class="hidden lg:flex items-center space-x-8">
+          <a href="index.html" class="text-gray-300 hover:text-white transition font-medium">Home</a>
+          <a href="about.html" class="text-gray-300 hover:text-white transition font-medium">About</a>
+          <a href="services.html" class="text-gray-300 hover:text-white transition font-medium">Services</a>
+          <a href="team.html" class="text-white font-medium">Team</a>
+          <a href="contact.html" class="text-gray-300 hover:text-white transition font-medium">Contact</a>
+          <a href="contact.html" class="btn-primary px-6 py-3 rounded-full text-white font-semibold flex items-center gap-2">
+            <span>Book Strategy Call</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </a>
+        </div>
+
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="lg:hidden hidden bg-navy-900/95 glass rounded-2xl mt-2 p-4">
+        <div class="flex flex-col space-y-4">
+          <a href="index.html" class="text-gray-300 hover:text-white py-2">Home</a>
+          <a href="about.html" class="text-gray-300 hover:text-white py-2">About</a>
+          <a href="services.html" class="text-gray-300 hover:text-white py-2">Services</a>
+          <a href="team.html" class="text-white font-medium py-2">Team</a>
+          <a href="contact.html" class="text-gray-300 hover:text-white py-2">Contact</a>
+          <a href="contact.html" class="btn-primary px-6 py-3 rounded-full text-white font-semibold text-center">Book Strategy Call</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-gradient min-h-[60vh] relative overflow-hidden pt-32 pb-20">
+    <div class="absolute inset-0">
+      <div class="absolute top-20 left-10 w-72 h-72 bg-primary-600/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent-sky/10 rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center">
+        <p class="inline-block px-4 py-2 bg-primary-600/20 border border-primary-500/30 rounded-full text-primary-400 text-sm font-semibold tracking-wider mb-6">
+          OUR TEAM
+        </p>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+          Meet the People Behind<br/>
+          <span class="gradient-text">Your Growth</span>
+        </h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          A dedicated team of experts committed to accelerating your B2B success.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Grid -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Waqar - CTO -->
+        <div class="bg-gradient-to-br from-primary-50 to-white rounded-3xl overflow-hidden card-shadow hover-lift reveal">
+          <div class="h-64 bg-gradient-to-br from-primary-600 to-accent-sky relative">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center">
+                <span class="text-5xl font-bold text-white">W</span>
+              </div>
+            </div>
+            <div class="absolute bottom-4 right-4 flex gap-2">
+              <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-navy-900 mb-1">Waqar</h3>
+            <p class="text-primary-600 font-semibold mb-4">Chief Technology Officer</p>
+            <p class="text-gray-600">Leading the technology strategy and innovation initiatives. Ensuring cutting-edge solutions drive client success through advanced automation and AI integration.</p>
+          </div>
+        </div>
+
+        <!-- Kashif - Business Development -->
+        <div class="bg-gradient-to-br from-green-50 to-white rounded-3xl overflow-hidden card-shadow hover-lift reveal" style="transition-delay: 0.1s;">
+          <div class="h-64 bg-gradient-to-br from-green-600 to-emerald-500 relative">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center">
+                <span class="text-5xl font-bold text-white">K</span>
+              </div>
+            </div>
+            <div class="absolute bottom-4 right-4 flex gap-2">
+              <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-navy-900 mb-1">Kashif</h3>
+            <p class="text-green-600 font-semibold mb-4">Business Development</p>
+            <p class="text-gray-600">Driving strategic partnerships and business growth. Expert in identifying opportunities, building relationships, and navigating complex B2B sales landscapes.</p>
+          </div>
+        </div>
+
+        <!-- Usman - Operations -->
+        <div class="bg-gradient-to-br from-orange-50 to-white rounded-3xl overflow-hidden card-shadow hover-lift reveal" style="transition-delay: 0.2s;">
+          <div class="h-64 bg-gradient-to-br from-orange-600 to-amber-500 relative">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center">
+                <span class="text-5xl font-bold text-white">U</span>
+              </div>
+            </div>
+            <div class="absolute bottom-4 right-4 flex gap-2">
+              <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-navy-900 mb-1">Usman</h3>
+            <p class="text-orange-600 font-semibold mb-4">Operations</p>
+            <p class="text-gray-600">Ensuring seamless delivery and operational excellence across all client engagements. Master of process optimization and quality assurance.</p>
+          </div>
+        </div>
+
+        <!-- Saqib - Marketing -->
+        <div class="bg-gradient-to-br from-pink-50 to-white rounded-3xl overflow-hidden card-shadow hover-lift reveal" style="transition-delay: 0.3s;">
+          <div class="h-64 bg-gradient-to-br from-pink-600 to-rose-500 relative">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center">
+                <span class="text-5xl font-bold text-white">S</span>
+              </div>
+            </div>
+            <div class="absolute bottom-4 right-4 flex gap-2">
+              <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-navy-900 mb-1">Saqib</h3>
+            <p class="text-pink-600 font-semibold mb-4">Marketing</p>
+            <p class="text-gray-600">Crafting compelling campaigns that resonate with target audiences. Expert in multi-channel strategies and brand positioning for B2B growth.</p>
+          </div>
+        </div>
+
+        <!-- Amin - Technology -->
+        <div class="bg-gradient-to-br from-purple-50 to-white rounded-3xl overflow-hidden card-shadow hover-lift reveal" style="transition-delay: 0.4s;">
+          <div class="h-64 bg-gradient-to-br from-purple-600 to-violet-500 relative">
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center">
+                <span class="text-5xl font-bold text-white">A</span>
+              </div>
+            </div>
+            <div class="absolute bottom-4 right-4 flex gap-2">
+              <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="p-8">
+            <h3 class="text-2xl font-bold text-navy-900 mb-1">Amin</h3>
+            <p class="text-purple-600 font-semibold mb-4">Technology</p>
+            <p class="text-gray-600">Building scalable tech solutions and integrations. Specialized in automation, CRM systems, and workflow optimization for maximum efficiency.</p>
+          </div>
+        </div>
+
+        <!-- Join Team Card -->
+        <div class="bg-gradient-to-br from-navy-900 to-navy-800 rounded-3xl overflow-hidden card-shadow hover-lift reveal flex items-center justify-center" style="transition-delay: 0.5s;">
+          <div class="p-8 text-center">
+            <div class="w-20 h-20 bg-primary-600/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-10 h-10 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-white mb-2">Join Our Team</h3>
+            <p class="text-gray-400 mb-6">We're always looking for talented individuals to join our growing team.</p>
+            <a href="contact.html" class="inline-flex items-center gap-2 btn-primary px-6 py-3 rounded-full text-white font-semibold">
+              Get in Touch
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values Section -->
+  <section class="py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+        <h2 class="text-4xl font-bold text-navy-900 mb-6">What Drives Our Team</h2>
+        <p class="text-xl text-gray-600">Shared values that unite us in delivering exceptional results for our clients.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl p-8 card-shadow hover-lift reveal text-center">
+          <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-navy-900 mb-3">Excellence</h3>
+          <p class="text-gray-600">We strive for excellence in everything we do, continuously raising the bar for quality and performance.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 card-shadow hover-lift reveal text-center" style="transition-delay: 0.1s;">
+          <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-navy-900 mb-3">Collaboration</h3>
+          <p class="text-gray-600">Success comes from working together. We foster open communication and team synergy.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 card-shadow hover-lift reveal text-center" style="transition-delay: 0.2s;">
+          <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.755-.988-2.386l-.548-.547z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-navy-900 mb-3">Innovation</h3>
+          <p class="text-gray-600">We embrace new ideas and technologies to stay ahead and deliver cutting-edge solutions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 bg-gradient-to-br from-primary-600 via-primary-700 to-navy-900">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl lg:text-5xl font-bold text-white mb-6 reveal">Work With Our Team</h2>
+      <p class="text-xl text-white/80 mb-10 reveal">Experience the difference of working with dedicated professionals who care about your success.</p>
+      <a href="contact.html" class="inline-flex items-center gap-3 bg-white text-primary-600 px-10 py-5 rounded-full font-bold text-lg hover:scale-105 hover:shadow-2xl transition-all reveal">
+        <span>Book Strategy Call</span>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-navy-900 pt-20 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-12 mb-16">
+        <div>
+          <a href="index.html" class="flex items-center space-x-3 mb-6">
+            <div class="w-10 h-10 bg-gradient-to-br from-primary-600 to-accent-sky rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+            </div>
+            <span class="text-xl font-bold text-white">KeyScale Growth</span>
+          </a>
+          <p class="text-gray-400">B2B Lead Generation & Appointment Setting Agency.</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-6">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-white transition">Services</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-6">Services</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Appointment Setting</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Lead Generation</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-white transition">Digital Marketing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-6">Contact</h4>
+          <p class="text-gray-400">info@keyscale.com</p>
+          <p class="text-gray-400">+1 (555) 123-4567</p>
+        </div>
+      </div>
+      <div class="border-t border-navy-800 pt-8 text-center">
+        <p class="text-gray-400 text-sm">&copy; 2026 KeyScale Growth. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.body.classList.remove('no-js');
+    document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+      document.getElementById('mobile-menu')?.classList.toggle('hidden');
+    });
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+      revealElements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) el.classList.add('active');
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+    setTimeout(revealOnScroll, 100);
+  </script>
+</body>
+</html>

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact KeyScale Growth - Book a strategy call and start building your sales pipeline today." />
+  <title>Contact Us | KeyScale Growth</title>
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { 50: '#eff6ff', 100: '#dbeafe', 200: '#bfdbfe', 300: '#93c5fd', 400: '#60a5fa', 500: '#3b82f6', 600: '#2563eb', 700: '#1d4ed8', 800: '#1e40af', 900: '#1e3a8a' },
+            navy: { 900: '#0F172A', 800: '#1E293B', 700: '#334155', 600: '#475569' },
+            accent: { sky: '#0EA5E9', light: '#38BDF8' }
+          },
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+        },
+      },
+    }
+  </script>
+  <style>
+    * { scroll-behavior: smooth; }
+    .glass { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+    .gradient-text { background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .card-shadow { box-shadow: 0 10px 40px -10px rgba(37, 99, 235, 0.2); }
+    .hover-lift { transition: all 0.3s ease; }
+    .hover-lift:hover { transform: translateY(-8px); box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.3); }
+    .reveal { opacity: 1; transform: translateY(0); transition: all 0.8s ease; }
+    .reveal:not(.active) { opacity: 0; transform: translateY(30px); }
+    .no-js .reveal { opacity: 1 !important; transform: none !important; }
+    .btn-primary { background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); transition: all 0.3s ease; }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px -5px rgba(37, 99, 235, 0.5); }
+    input:focus, select:focus, textarea:focus { outline: none; border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1); }
+  </style>
+</head>
+<body class="font-sans antialiased bg-white text-navy-900 overflow-x-hidden">
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-navy-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center space-x-3">
+          <div class="w-10 h-10 bg-gradient-to-br from-primary-600 to-accent-sky rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+            </svg>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-white">KeyScale Growth</span>
+            <p class="text-xs text-gray-400 -mt-1">B2B Revenue Acceleration</p>
+          </div>
+        </a>
+
+        <div class="hidden lg:flex items-center space-x-8">
+          <a href="index.html" class="text-gray-300 hover:text-white transition font-medium">Home</a>
+          <a href="about.html" class="text-gray-300 hover:text-white transition font-medium">About</a>
+          <a href="services.html" class="text-gray-300 hover:text-white transition font-medium">Services</a>
+          <a href="team.html" class="text-gray-300 hover:text-white transition font-medium">Team</a>
+          <a href="contact.html" class="text-white font-medium">Contact</a>
+          <a href="contact.html" class="btn-primary px-6 py-3 rounded-full text-white font-semibold flex items-center gap-2">
+            <span>Book Strategy Call</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+          </a>
+        </div>
+
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+
+      <div id="mobile-menu" class="lg:hidden hidden bg-navy-900/95 glass rounded-2xl mt-2 p-4">
+        <div class="flex flex-col space-y-4">
+          <a href="index.html" class="text-gray-300 hover:text-white py-2">Home</a>
+          <a href="about.html" class="text-gray-300 hover:text-white py-2">About</a>
+          <a href="services.html" class="text-gray-300 hover:text-white py-2">Services</a>
+          <a href="team.html" class="text-gray-300 hover:text-white py-2">Team</a>
+          <a href="contact.html" class="text-white font-medium py-2">Contact</a>
+          <a href="contact.html" class="btn-primary px-6 py-3 rounded-full text-white font-semibold text-center">Book Strategy Call</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-gradient min-h-[40vh] relative overflow-hidden pt-32 pb-20">
+    <div class="absolute inset-0">
+      <div class="absolute top-20 left-10 w-72 h-72 bg-primary-600/20 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent-sky/10 rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center">
+        <p class="inline-block px-4 py-2 bg-primary-600/20 border border-primary-500/30 rounded-full text-primary-400 text-sm font-semibold tracking-wider mb-6">
+          GET IN TOUCH
+        </p>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+          Let's Start Your<br/>
+          <span class="gradient-text">Growth Journey</span>
+        </h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Book a free strategy call and discover how we can help accelerate your B2B revenue.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16">
+        <!-- Contact Info -->
+        <div class="reveal">
+          <h2 class="text-3xl font-bold text-navy-900 mb-8">Contact Information</h2>
+
+          <div class="space-y-8">
+            <!-- Email -->
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-7 h-7 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-navy-900 text-lg">Email</h3>
+                <a href="mailto:info@keyscale.com" class="text-gray-600 hover:text-primary-600 transition">info@keyscale.com</a>
+                <p class="text-gray-400 text-sm mt-1">We respond within 24 hours</p>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-navy-900 text-lg">Phone</h3>
+                <a href="tel:+15551234567" class="text-gray-600 hover:text-primary-600 transition">+1 (555) 123-4567</a>
+                <p class="text-gray-400 text-sm mt-1">Mon-Fri 9am-6pm EST</p>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-7 h-7 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L8.343 7.343A4 4 0 1112 3a4 4 0 01-4.343 4.343l9.314 9.314a4 4 0 01-5.657 5.657l-1.414-1.414"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-navy-900 text-lg">Location</h3>
+                <p class="text-gray-600">United States</p>
+                <p class="text-gray-400 text-sm mt-1">Serving clients globally</p>
+              </div>
+            </div>
+
+            <!-- Business Hours -->
+            <div class="flex items-start gap-4">
+              <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-navy-900 text-lg">Business Hours</h3>
+                <p class="text-gray-600">Monday - Friday: 9:00 AM - 6:00 PM EST</p>
+                <p class="text-gray-400 text-sm mt-1">Weekend support available</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map Placeholder -->
+          <div class="mt-12 bg-gray-100 rounded-2xl h-64 flex items-center justify-center">
+            <div class="text-center">
+              <svg class="w-16 h-16 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
+              </svg>
+              <p class="text-gray-500">Map Integration</p>
+              <p class="text-gray-400 text-sm">Interactive map coming soon</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="reveal" style="transition-delay: 0.2s;">
+          <div class="bg-gradient-to-br from-primary-50 to-white rounded-3xl p-8 lg:p-12 card-shadow">
+            <h2 class="text-3xl font-bold text-navy-900 mb-2">Book a Strategy Call</h2>
+            <p class="text-gray-600 mb-8">Fill out the form and we'll get back to you within 24 hours.</p>
+
+            <form id="contact-form" class="space-y-6">
+              <!-- Full Name -->
+              <div>
+                <label for="fullName" class="block text-sm font-semibold text-navy-900 mb-2">Full Name *</label>
+                <input type="text" id="fullName" name="fullName" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:border-primary-500 focus:ring-2 focus:ring-primary-100 transition" placeholder="John Smith">
+              </div>
+
+              <!-- Company Name -->
+              <div>
+                <label for="companyName" class="block text-sm font-semibold text-navy-900 mb-2">Company Name *</label>
+                <input type="text" id="companyName" name="companyName" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:border-primary-500 focus:ring-2 focus:ring-primary-100 transition" placeholder="Acme Inc.">
+              </div>
+
+              <!-- Email & Phone Row -->
+              <div class="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label for="email" class="block text-sm font-semibold text-navy-900 mb-2">Email *</label>
+                  <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:border-primary-500 focus:ring-2 focus:ring-primary-100 transition" placeholder="john@company.com">
+                </div>
+                <div>
+                  <label for="phone" class="block text-sm font-semibold text-navy-900 mb-2">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:border-primary-500 focus:ring-2 focus:ring-primary-100 transition" placeholder="+1 (555) 000-0000">
+                </div>
+              </div>
+
+              <!-- Country -->
+              <div>
+                <label for="country" class="block text-sm font-semibold text-navy-900 mb-2">Country</label>
+                <select id="country" name="country" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:border-primary-500 focus:ring-2 focus:ring-primary-100 transition">
+                  <option value="">Select Country</option>
+                  <option value="US">United States</option>
+                  <option value="CA">Canada</option>
+                  <option value="UK">United Kingdom</option>
+                  <option value="AU">Australia</option>
+                  <option value="DE">Germany</option>
+                  <option value="FR">France</option>
+                  <option value="AE">United Arab Emirates</option>
+                  <option value="SG">Singapore</option>
+                  <option value="OTHER">Other</option>
+                </select>
+              </div>
+
+              <!-- Services Interested -->
+              <div>
+                <label for="services" class="block text-sm font-semibold text-navy-900 mb-2">Services Interested In</label>
+                <select id="services" name="services" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:border-primary-500 focus:ring-2 focus:ring-primary-100 transition">
+                  <option value="">Select a Service</option>
+                  <option value="appointment-setting">Appointment Setting</option>
+                  <option value="lead-generation">B2B Lead Generation</option>
+                  <option value="high-ticket">High Ticket Client Acquisition</option>
+                  <option value="digital-marketing">Digital Marketing</option>
+                  <option value="website-development">Website Development</option>
+                  <option value="multiple">Multiple Services</option>
+                </select>
+              </div>
+
+              <!-- Message -->
+              <div>
+                <label for="message" class="block text-sm font-semibold text-navy-900 mb-2">Message</label>
+                <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-200 rounded-xl focus:border-primary-500 focus:ring-2 focus:ring-primary-100 transition resize-none" placeholder="Tell us about your goals and challenges..."></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="w-full btn-primary py-4 rounded-xl text-white font-semibold text-lg flex items-center justify-center gap-2">
+                <span>Send Message</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+              </button>
+
+              <p class="text-gray-500 text-sm text-center">By submitting, you agree to our Privacy Policy and Terms of Service.</p>
+            </form>
+
+            <!-- Success Message (Hidden) -->
+            <div id="success-message" class="hidden text-center py-12">
+              <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-navy-900 mb-2">Message Sent!</h3>
+              <p class="text-gray-600">We'll get back to you within 24 hours.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Mini Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 reveal">
+        <h2 class="text-3xl font-bold text-navy-900">Quick Questions?</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-xl p-6 card-shadow reveal">
+          <h3 class="font-semibold text-navy-900 mb-2">How quickly can you start?</h3>
+          <p class="text-gray-600">We typically onboard new clients within 1-2 weeks after the initial strategy call.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 card-shadow reveal" style="transition-delay: 0.1s;">
+          <h3 class="font-semibold text-navy-900 mb-2">What's your pricing model?</h3>
+          <p class="text-gray-600">We offer flexible pricing based on your goals. Book a call to discuss the best option for you.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 card-shadow reveal" style="transition-delay: 0.2s;">
+          <h3 class="font-semibold text-navy-900 mb-2">Do you offer guarantees?</h3>
+          <p class="text-gray-600">Yes, we offer meeting guarantees on qualified appointments that meet your criteria.</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 card-shadow reveal" style="transition-delay: 0.3s;">
+          <h3 class="font-semibold text-navy-900 mb-2">Which industries do you serve?</h3>
+          <p class="text-gray-600">We serve SaaS, Technology, IT Services, Healthcare, Finance, and more B2B sectors.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-navy-900 pt-20 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-12 mb-16">
+        <div>
+          <a href="index.html" class="flex items-center space-x-3 mb-6">
+            <div class="w-10 h-10 bg-gradient-to-br from-primary-600 to-accent-sky rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+            </div>
+            <span class="text-xl font-bold text-white">KeyScale Growth</span>
+          </a>
+          <p class="text-gray-400">B2B Lead Generation & Appointment Setting Agency helping businesses scale their sales pipeline.</p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-6">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition">Home</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-white transition">About</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-white transition">Services</a></li>
+            <li><a href="team.html" class="text-gray-400 hover:text-white transition">Team</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-6">Services</h4>
+          <ul class="space-y-3">
+            <li><a href="services.html" class="text-gray-400 hover:text-white transition">Appointment Setting</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-white transition">Lead Generation</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-white transition">Digital Marketing</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-white transition">Website Development</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-6">Contact</h4>
+          <ul class="space-y-3">
+            <li class="flex items-center gap-3 text-gray-400">
+              <svg class="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+              info@keyscale.com
+            </li>
+            <li class="flex items-center gap-3 text-gray-400">
+              <svg class="w-5 h-5 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+              +1 (555) 123-4567
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-navy-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-gray-400 text-sm">&copy; 2026 KeyScale Growth. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="text-gray-400 hover:text-white text-sm transition">Privacy Policy</a>
+          <a href="#" class="text-gray-400 hover:text-white text-sm transition">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-primary-600 text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible hover:bg-primary-700 transition-all z-50">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+  </button>
+
+  <script>
+    document.body.classList.remove('no-js');
+
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+      document.getElementById('mobile-menu')?.classList.toggle('hidden');
+    });
+
+    // Form submission
+    document.getElementById('contact-form')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      document.getElementById('contact-form').classList.add('hidden');
+      document.getElementById('success-message').classList.remove('hidden');
+    });
+
+    // Back to top
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) {
+        backToTop.style.opacity = '1';
+        backToTop.style.visibility = 'visible';
+      } else {
+        backToTop.style.opacity = '0';
+        backToTop.style.visibility = 'hidden';
+      }
+    });
+    backToTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // Scroll reveal
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+      revealElements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) el.classList.add('active');
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+    setTimeout(revealOnScroll, 100);
+  </script>
+</body>
+</html>
