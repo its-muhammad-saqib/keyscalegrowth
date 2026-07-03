@@ -25,22 +25,25 @@
     }
   </script>
   <style>
-    * { scroll-behavior: smooth; }
-    .glass { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
-    .gradient-text { background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .card-shadow { box-shadow: 0 10px 40px -10px rgba(37, 99, 235, 0.2); }
-    .hover-lift { transition: all 0.3s ease; }
-    .hover-lift:hover { transform: translateY(-8px); box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.3); }
-    .reveal { opacity: 1; transform: translateY(0); transition: all 0.8s ease; }
-    .reveal:not(.active) { opacity: 0; transform: translateY(30px); }
-    .no-js .reveal { opacity: 1 !important; transform: none !important; }
-    .btn-primary { background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); transition: all 0.3s ease; }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px -5px rgba(37, 99, 235, 0.5); }
+    .hero-gradient{background:linear-gradient(135deg,#0F172A 0%,#1e3a8a 55%,#0F172A 100%)}
+    .section-dark{background:#0F172A}
+    .section-white{background:#ffffff}
+    *{scroll-behavior:smooth}
+    .glass{backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+    .gradient-text{background:linear-gradient(135deg,#2563eb 0%,#0ea5e9 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .card-shadow{box-shadow:0 10px 40px -10px rgba(37,99,235,0.2)}
+    .hover-lift{transition:all .3s ease}
+    .hover-lift:hover{transform:translateY(-8px);box-shadow:0 20px 40px -15px rgba(37,99,235,0.3)}
+    .reveal{opacity:1;transform:none;transition:opacity .7s ease,transform .7s ease}
+    .js-ready .reveal{opacity:0;transform:translateY(28px)}
+    .js-ready .reveal.active{opacity:1;transform:none}
+    .btn-primary{background:linear-gradient(135deg,#2563eb 0%,#1d4ed8 100%);transition:all .3s ease}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px -5px rgba(37,99,235,0.5)}
   </style>
 </head>
 <body class="font-sans antialiased bg-white text-navy-900 overflow-x-hidden">
   <!-- Navigation -->
-  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-navy-900">
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 hero-gradient">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <a href="index.html" class="flex items-center space-x-3">
@@ -67,8 +70,9 @@
           </a>
         </div>
 
-        <button id="mobile-menu-btn" class="lg:hidden p-2 text-white">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-white" aria-label="Toggle menu">
+          <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
       </div>
 
@@ -92,23 +96,28 @@
       <div class="absolute bottom-20 right-10 w-96 h-96 bg-accent-sky/10 rounded-full blur-3xl"></div>
     </div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="text-center">
-        <p class="inline-block px-4 py-2 bg-primary-600/20 border border-primary-500/30 rounded-full text-primary-400 text-sm font-semibold tracking-wider mb-6">
-          OUR TEAM
-        </p>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-          Meet the People Behind<br/>
-          <span class="gradient-text">Your Growth</span>
-        </h1>
-        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
-          A dedicated team of experts committed to accelerating your B2B success.
-        </p>
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="text-center lg:text-left">
+          <p class="inline-block px-4 py-2 bg-primary-600/20 border border-primary-500/30 rounded-full text-primary-400 text-sm font-semibold tracking-wider mb-6">
+            OUR TEAM
+          </p>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+            Meet the People Behind<br/>
+            <span class="gradient-text">Your Growth</span>
+          </h1>
+          <p class="text-xl text-gray-300 max-w-xl">
+            A dedicated team of experts committed to accelerating your B2B success.
+          </p>
+        </div>
+        <div class="flex justify-center lg:justify-end">
+          <img src="/image.png" alt="KeyScale Team" class="max-w-md w-full rounded-2xl shadow-2xl" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22%3E%3Crect fill=%22%231e3a8a%22 width=%22400%22 height=%22300%22 rx=%2216%22/%3E%3Ctext x=%22200%22 y=%22150%22 fill=%22%2360a5fa%22 font-size=%2224%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EKeyScale Growth%3C/text%3E%3C/svg%3E'">
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Team Grid -->
-  <section class="py-24 bg-white">
+  <section class="py-24 section-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Waqar - CTO -->
@@ -133,7 +142,7 @@
         </div>
 
         <!-- Kashif - Business Development -->
-        <div class="bg-gradient-to-br from-green-50 to-white rounded-3xl overflow-hidden card-shadow hover-lift reveal" style="transition-delay: 0.1s;">
+        <div class="bg-gradient-to-br from-green-50 to-white rounded-3xl overflow-hidden card-shadow hover-lift reveal" style="transition-delay:0.1s">
           <div class="h-64 bg-gradient-to-br from-green-600 to-emerald-500 relative">
             <div class="absolute inset-0 flex items-center justify-center">
               <div class="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center">
@@ -154,7 +163,7 @@
         </div>
 
         <!-- Usman - Operations -->
-        <div class="bg-gradient-to-br from-orange-50 to-white rounded-3xl overflow-hidden card-shadow hover-lift reveal" style="transition-delay: 0.2s;">
+        <div class="bg-gradient-to-br from-orange-50 to-white rounded-3xl overflow-hidden card-shadow hover-lift reveal" style="transition-delay:0.2s">
           <div class="h-64 bg-gradient-to-br from-orange-600 to-amber-500 relative">
             <div class="absolute inset-0 flex items-center justify-center">
               <div class="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center">
@@ -175,7 +184,7 @@
         </div>
 
         <!-- Saqib - Marketing -->
-        <div class="bg-gradient-to-br from-pink-50 to-white rounded-3xl overflow-hidden card-shadow hover-lift reveal" style="transition-delay: 0.3s;">
+        <div class="bg-gradient-to-br from-pink-50 to-white rounded-3xl overflow-hidden card-shadow hover-lift reveal" style="transition-delay:0.3s">
           <div class="h-64 bg-gradient-to-br from-pink-600 to-rose-500 relative">
             <div class="absolute inset-0 flex items-center justify-center">
               <div class="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center">
@@ -196,8 +205,8 @@
         </div>
 
         <!-- Amin - Technology -->
-        <div class="bg-gradient-to-br from-purple-50 to-white rounded-3xl overflow-hidden card-shadow hover-lift reveal" style="transition-delay: 0.4s;">
-          <div class="h-64 bg-gradient-to-br from-purple-600 to-violet-500 relative">
+        <div class="bg-gradient-to-br from-indigo-50 to-white rounded-3xl overflow-hidden card-shadow hover-lift reveal" style="transition-delay:0.4s">
+          <div class="h-64 bg-gradient-to-br from-indigo-600 to-violet-500 relative">
             <div class="absolute inset-0 flex items-center justify-center">
               <div class="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center">
                 <span class="text-5xl font-bold text-white">A</span>
@@ -211,13 +220,13 @@
           </div>
           <div class="p-8">
             <h3 class="text-2xl font-bold text-navy-900 mb-1">Amin</h3>
-            <p class="text-purple-600 font-semibold mb-4">Technology</p>
+            <p class="text-indigo-600 font-semibold mb-4">Technology</p>
             <p class="text-gray-600">Building scalable tech solutions and integrations. Specialized in automation, CRM systems, and workflow optimization for maximum efficiency.</p>
           </div>
         </div>
 
         <!-- Join Team Card -->
-        <div class="bg-gradient-to-br from-navy-900 to-navy-800 rounded-3xl overflow-hidden card-shadow hover-lift reveal flex items-center justify-center" style="transition-delay: 0.5s;">
+        <div class="bg-gradient-to-br from-navy-900 to-navy-800 rounded-3xl overflow-hidden card-shadow hover-lift reveal flex items-center justify-center" style="transition-delay:0.5s">
           <div class="p-8 text-center">
             <div class="w-20 h-20 bg-primary-600/20 rounded-full flex items-center justify-center mx-auto mb-6">
               <svg class="w-10 h-10 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -237,36 +246,36 @@
   </section>
 
   <!-- Values Section -->
-  <section class="py-24 bg-gray-50">
+  <section class="py-24 section-dark">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-16 reveal">
-        <h2 class="text-4xl font-bold text-navy-900 mb-6">What Drives Our Team</h2>
-        <p class="text-xl text-gray-600">Shared values that unite us in delivering exceptional results for our clients.</p>
+        <h2 class="text-4xl font-bold text-white mb-6">What Drives Our Team</h2>
+        <p class="text-xl text-gray-400">Shared values that unite us in delivering exceptional results for our clients.</p>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-2xl p-8 card-shadow hover-lift reveal text-center">
+        <div class="bg-navy-800/50 rounded-2xl p-8 card-shadow hover-lift reveal text-center">
           <div class="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
             <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
           </div>
-          <h3 class="text-xl font-bold text-navy-900 mb-3">Excellence</h3>
-          <p class="text-gray-600">We strive for excellence in everything we do, continuously raising the bar for quality and performance.</p>
+          <h3 class="text-xl font-bold text-white mb-3">Excellence</h3>
+          <p class="text-gray-400">We strive for excellence in everything we do, continuously raising the bar for quality and performance.</p>
         </div>
 
-        <div class="bg-white rounded-2xl p-8 card-shadow hover-lift reveal text-center" style="transition-delay: 0.1s;">
+        <div class="bg-navy-800/50 rounded-2xl p-8 card-shadow hover-lift reveal text-center" style="transition-delay:0.1s">
           <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
             <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
           </div>
-          <h3 class="text-xl font-bold text-navy-900 mb-3">Collaboration</h3>
-          <p class="text-gray-600">Success comes from working together. We foster open communication and team synergy.</p>
+          <h3 class="text-xl font-bold text-white mb-3">Collaboration</h3>
+          <p class="text-gray-400">Success comes from working together. We foster open communication and team synergy.</p>
         </div>
 
-        <div class="bg-white rounded-2xl p-8 card-shadow hover-lift reveal text-center" style="transition-delay: 0.2s;">
+        <div class="bg-navy-800/50 rounded-2xl p-8 card-shadow hover-lift reveal text-center" style="transition-delay:0.2s">
           <div class="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
             <svg class="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.755-.988-2.386l-.548-.547z"></path></svg>
           </div>
-          <h3 class="text-xl font-bold text-navy-900 mb-3">Innovation</h3>
-          <p class="text-gray-600">We embrace new ideas and technologies to stay ahead and deliver cutting-edge solutions.</p>
+          <h3 class="text-xl font-bold text-white mb-3">Innovation</h3>
+          <p class="text-gray-400">We embrace new ideas and technologies to stay ahead and deliver cutting-edge solutions.</p>
         </div>
       </div>
     </div>
@@ -285,7 +294,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-navy-900 pt-20 pb-8">
+  <footer class="section-dark pt-20 pb-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid md:grid-cols-4 gap-12 mb-16">
         <div>
@@ -309,9 +318,9 @@
         <div>
           <h4 class="text-white font-semibold mb-6">Services</h4>
           <ul class="space-y-3">
-            <li><a href="#" class="text-gray-400 hover:text-white transition">Appointment Setting</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white transition">Lead Generation</a></li>
-            <li><a href="#" class="text-gray-400 hover:text-white transition">Digital Marketing</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-white transition">Appointment Setting</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-white transition">Lead Generation</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-white transition">Digital Marketing</a></li>
           </ul>
         </div>
         <div>
@@ -326,21 +335,47 @@
     </div>
   </footer>
 
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-primary-600 text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible hover:bg-primary-700 transition-all z-50">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+  </button>
+
   <script>
-    document.body.classList.remove('no-js');
-    document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
-      document.getElementById('mobile-menu')?.classList.toggle('hidden');
+    document.body.classList.add('js-ready');
+
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+
+    mobileBtn?.addEventListener('click', () => {
+      mobileMenu?.classList.toggle('hidden');
+      iconOpen?.classList.toggle('hidden');
+      iconClose?.classList.toggle('hidden');
     });
-    const revealElements = document.querySelectorAll('.reveal');
-    const revealOnScroll = () => {
-      revealElements.forEach(el => {
-        const top = el.getBoundingClientRect().top;
-        if (top < window.innerHeight - 100) el.classList.add('active');
+
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
       });
-    };
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('load', revealOnScroll);
-    setTimeout(revealOnScroll, 100);
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    reveals.forEach(el => observer.observe(el));
+
+    const backToTop = document.getElementById('back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) {
+        backToTop.style.opacity = '1';
+        backToTop.style.visibility = 'visible';
+      } else {
+        backToTop.style.opacity = '0';
+        backToTop.style.visibility = 'hidden';
+      }
+    });
+    backToTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   </script>
 </body>
 </html>

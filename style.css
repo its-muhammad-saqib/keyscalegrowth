@@ -1,5 +1,20 @@
 /* KeyScale Growth - Premium CSS Styles */
 
+/* Hero gradient shared across all pages */
+.hero-gradient {
+  background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 50%, #0F172A 100%);
+}
+
+/* Page sub-hero (inner pages) */
+.page-hero {
+  background: linear-gradient(135deg, #0F172A 0%, #1e3a8a 60%, #0F172A 100%);
+}
+
+/* Dark section */
+.section-dark {
+  background: #0F172A;
+}
+
 /* Base Reset and Typography */
 * {
   margin: 0;
